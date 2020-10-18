@@ -185,7 +185,7 @@ function styleProduction() {
         }))
         .pipe(styleMin())
         .pipe(unuseStyle({
-            html: './index.html'
+            html: ['./dist/*.html']
         }))
         .pipe(rename({
             suffix: '.min'
