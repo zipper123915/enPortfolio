@@ -22,8 +22,8 @@ const webpackStream = require('webpack-stream');
 const webpackConfig = require('./webpack.config.js');
 
 // images
-const imagemin = require('gulp-image');
-const webp = require('gulp-webp');
+// const imagemin = require('gulp-image');
+const webp = require('gulp-cwebp');
 const favicons = require('gulp-favicons');
 
 // fonts
@@ -64,7 +64,7 @@ const path = {
         html: `${ sourceFolder }/*.ejs`,
         style: `${ sourceFolder }/style/*.scss`,
         script: `${ sourceFolder }/js/index.js`,
-        img: `${ sourceFolder }/images/*.{jpeg,png,gif,svg,webp}`,
+        img: `${ sourceFolder }/images/**/*.{jpeg,png,gif,svg,webp}`,
         icons: `${ sourceFolder }/images/icons/*.svg`,
         favicons: `${ sourceFolder }/favicon.png`,
         fonts: `${ sourceFolder }/fonts/**/*.*`
@@ -184,9 +184,9 @@ function styleProduction() {
             grid: true
         }))
         .pipe(styleMin())
-        // .pipe(unuseStyle({
-        //     html: './index.html'
-        // }))
+        .pipe(unuseStyle({
+            html: './index.html'
+        }))
         .pipe(rename({
             suffix: '.min'
         }))
@@ -216,9 +216,7 @@ function scriptProduction() {
 function imagesDevelopment() {
     return src(path.src.img)
         .pipe(changed(path.build.img, { extension: '.{jpg|png|jpeg|gif|svg}' }))
-        .pipe(webp({
-            quality: 70
-        }))
+        .pipe(webp())
         .pipe(src(path.src.img))
         .pipe(dest(path.build.img))
         .pipe(browserSync.stream());
@@ -227,22 +225,20 @@ function imagesDevelopment() {
 function imagesProduction() {
     return src(path.src.img)
         .pipe(changed(path.build.img, { extension: '.{jpg|png|jpeg|gif|svg}' }))
-        .pipe(webp({
-            quality: 70
-        }))
+        .pipe(webp())
         .pipe(dest(path.build.img))
         .pipe(src(path.src.img))
-        .pipe(imagemin({
-            pngquant: true,
-            optipng: false,
-            zopflipng: true,
-            jpegRecompress: false,
-            mozjpeg: true,
-            gifsicle: true,
-            svgo: true,
-            concurrent: 10,
-            quiet: true // defaults to false
-        }))
+        // .pipe(imagemin({
+        //     pngquant: true,
+        //     optipng: false,
+        //     zopflipng: true,
+        //     jpegRecompress: false,
+        //     mozjpeg: true,
+        //     gifsicle: true,
+        //     svgo: true,
+        //     concurrent: 10,
+        //     quiet: true // defaults to false
+        // }))
         .pipe(dest(path.build.img))
         .pipe(browserSync.stream());
 }

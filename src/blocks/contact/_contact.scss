@@ -1,0 +1,128 @@
+.contact {
+  padding: 40px 0;
+  background-color: $darken-bg;
+
+  &__inner {
+    display: flex;
+
+    @media #{$tablet} {
+      flex-direction: column;
+    }
+
+    @extend %container;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    font-family: Raleway, sans-serif;
+    font-size: 42px;
+    font-weight: 500;
+    color: #555;
+
+    @extend %container;
+  }
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+
+    @media #{$mobile} {
+      display: block;
+    }
+  }
+
+  &__error {
+    font-family: Raleway, sans-serif;
+    color: #f00;
+
+    &:empty {
+      display: none;
+    }
+  }
+
+  &__name {
+    font-family: Raleway, sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: #474747;
+  }
+
+  &__value {
+    display: flex;
+    margin: 20px 0;
+    color: #8c8c8c;
+  }
+
+  &__social {
+    list-style-type: none;
+
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+
+    img {
+      width: 35px;
+      height: 35px;
+    }
+  }
+
+  &__content {
+    flex-basis: 47.5%;
+
+    @media #{$tablet} {
+      order: 1;
+    }
+  }
+
+  &__form {
+    flex-basis: 47.5%;
+    margin-right: 5%;
+
+    > * {
+      margin-bottom: 20px;
+    }
+
+    @media #{$tablet} {
+      flex-basis: 100%;
+      order: 2;
+    }
+  }
+
+  &__button {
+    display: flex;
+
+    @media #{$mobile} {
+      justify-content: space-between;
+
+      .button {
+        flex-basis: 50%;
+      }
+    }
+  }
+
+  &__loader {
+    display: none;
+    align-self: center;
+    margin-left: 15px;
+    transition: 0.5s;
+
+    &--show {
+      display: block;
+    }
+  }
+
+  &__success {
+    flex-shrink: 1;
+    align-self: center;
+    margin-left: 15px;
+    font-family: Raleway, sans-serif;
+    color: green;
+    opacity: 0;
+    transition: 0.5s;
+
+    &--show {
+      opacity: 1;
+    }
+  }
+}

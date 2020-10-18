@@ -83,11 +83,20 @@
 @import "../blocks/footer/footer";
 @import "../blocks/stat/stat";
 @import "../blocks/about/about";
+@import "../blocks/skills/skills";
+@import "../blocks/contact/contact";
+@import "../blocks/input/input";
+@import "../blocks/textarea/textarea";
 
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+
+  &::selection {
+    color: #000;
+    background-color: $accent-color;
+  }
 }
 
 img {

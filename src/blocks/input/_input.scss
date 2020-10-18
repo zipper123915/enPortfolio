@@ -1,0 +1,21 @@
+.input {
+  width: 100%;
+  margin: 8px 0 18px;
+
+  &__label {
+    display: block;
+    margin-bottom: 10px;
+    font-family: Raleway, sans-serif;
+    color: #363636;
+  }
+
+  &__input {
+    width: 100%;
+    padding: 12px 15px;
+    font-family: Raleway, sans-serif;
+    color: #363636;
+    background-color: #fafaff;
+    border: 1px solid #ebebeb;
+    outline: none;
+  }
+}

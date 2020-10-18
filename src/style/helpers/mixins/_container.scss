@@ -1,6 +1,10 @@
 %container {
   padding: 0 20%;
 
+  @media (max-width: 1350px) {
+    padding: 0 10%;
+  }
+
   @media #{$tablet} {
     padding: 0 5%;
   }

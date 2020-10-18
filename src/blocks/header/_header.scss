@@ -3,7 +3,7 @@
   top: 0;
   right: 0;
   left: 0;
-  z-index: 10;
+  z-index: 20;
   padding: 20px 0;
   font-family: Montserrat, sans-serif;
   background-color: rgba(86, 86, 86, 0.6);
@@ -20,19 +20,25 @@
     @extend %container;
   }
 
-  &__navbar {
+  &__link-list {
     display: flex;
     flex-grow: 1;
     flex-shrink: 1;
     justify-content: flex-end;
+
+    @media #{$tablet} {
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+  }
+
+  &__navbar {
     transition: transform 0.5s;
 
     @media #{$tablet} {
       position: fixed;
       top: 0;
       right: 0;
-      flex-direction: column;
-      justify-content: flex-start;
       width: 240px;
       height: 100vh;
       padding: 25px;
@@ -47,10 +53,14 @@
   &__link {
     display: block;
     font-size: 14px;
-    color: $main-text-color;
-    text-decoration: none;
-    white-space: nowrap;
+    list-style-type: none;
     transition: 0.5s;
+
+    a {
+      color: $main-text-color;
+      text-decoration: none;
+      white-space: nowrap;
+    }
 
     &:not(:last-child) {
       margin-right: 3.8%;
@@ -82,7 +92,10 @@
 
   &__nav-closer {
     display: none;
-    margin-left: auto;
+
+    img {
+      margin-left: auto;
+    }
 
     @media #{$tablet} {
       display: block;

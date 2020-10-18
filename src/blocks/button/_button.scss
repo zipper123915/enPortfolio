@@ -1,5 +1,7 @@
 .button {
-  padding: 20px 40px;
+  position: relative;
+  padding: 20px 20px;
+  overflow: hidden;
   font-family: Raleway, sans-serif;
   font-weight: 600;
   color: $main-text-color;
@@ -9,14 +11,34 @@
   background-color: $accent-color;
   border: none;
   border-radius: 3px;
-  box-shadow: inset 0 -3px 0 #736357;
+  outline: none;
+
+  &::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 56px;
+    content: '';
+    background-color: #837364;
+    transition: 0.5s;
+    transform: scaleY(0.08);
+    transform-origin: 0 100%;
+  }
+
+  &:hover {
+    .button::after {
+      transform: scaleY(1);
+    }
+  }
+
+  &__text {
+    position: relative;
+    z-index: 3;
+  }
 
   &:focus {
     outline: none;
-  }
-
-  &:active {
-    box-shadow: none;
-    transform: translateY(3px);
   }
 }

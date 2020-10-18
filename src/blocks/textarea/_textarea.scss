@@ -1,0 +1,21 @@
+.textarea {
+  margin: 8px 0 18px;
+
+  &__textarea {
+    width: 100%;
+    padding: 12px 15px;
+    font-family: Raleway, sans-serif;
+    color: #363636;
+    resize: none;
+    background-color: #fafafa;
+    border: 1px solid #ebebeb;
+    outline: none;
+  }
+
+  &__label {
+    display: block;
+    margin-bottom: 10px;
+    font-family: Raleway, sans-serif;
+    color: #363636;
+  }
+}
