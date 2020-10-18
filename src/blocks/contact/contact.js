@@ -15,16 +15,9 @@ const errorMsg = {
 
 button.addEventListener('click', () => {
     const body = new FormData(form);
-    // fetch('https://email-to-me.herokuapp.com/mail', {
-    //     method: 'POST',
-    //     body
-    // }).then(res => {
-    //     console.log(res);
-    // }).catch(err => {
-    //     console.error(err)
-    // })
+    
     loader.classList.add('contact__loader--show');
-    fetch('http://localhost:9000/mail', {
+    fetch('https://email-to-me.herokuapp.com/mail', {
         method: 'POST',
         body
     })
