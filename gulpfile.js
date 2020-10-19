@@ -136,6 +136,7 @@ function htmlDevelopment() {
         .pipe(rename({ extname: '.html' }))
         .pipe(replace(/\.(scss|sass)/g, '.css'))
         .pipe(replace(/(\.\.\/)+/g, ''))
+        .pipe(htmlWebp())
         .pipe(dest(path.build.html))
         .pipe(browserSync.stream());
 }
