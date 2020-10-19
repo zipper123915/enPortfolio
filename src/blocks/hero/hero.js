@@ -1,5 +1,5 @@
 import Glide, { Controls, Swipe } from '@glidejs/glide/dist/glide.modular.esm';
-import webpCheck from '~/js/webpCheck';
+import webpCheck from '../../js/webpCheck';
 
 const hero = document.querySelector('.hero');
 if (!hero.classList.contains('hero--without-slider')) {

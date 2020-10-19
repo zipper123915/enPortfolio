@@ -1,6 +1,5 @@
 @import "node_modules/@glidejs/glide/src/assets/sass/glide.core";
-
-@use "../../style/helpers/mixins/adaptiv-font" as *;
+@import "../../style/helpers/mixins/adaptiv-font";
 
 .hero {
   position: relative;

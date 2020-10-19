@@ -8,8 +8,7 @@ skills.forEach(skill => {
             const number = parseInt(skill.querySelector('.skills__percent').textContent);
             const up = { number1: 0 };
             
-            const timeline = anime.timeline();
-            timeline.add({
+            anime({
                 targets: up,
                 number1: number,
                 round: 10,
@@ -17,13 +16,13 @@ skills.forEach(skill => {
                 easing: 'easeInOutExpo',
                 update() {
                     skill.querySelector('.skills__progress').style.width = up.number1 + '%';
+                },
+                complete() {
+                    const percent = skill.querySelector('.skills__percent');
+                    percent.classList.add('skills__percent--visible');
+                    const bar = skill.querySelector('.skills__bar');
+                    bar.classList.add('skills__bar--finished');
                 }
-            });
-            timeline.finished.then(() => {
-                const percent = skill.querySelector('.skills__percent');
-                percent.classList.add('skills__percent--visible')
-                const bar = skill.querySelector('.skills__bar');
-                bar.classList.add('skills__bar--finished');
             });
             
             window.removeEventListener('scroll', scrollChaek);

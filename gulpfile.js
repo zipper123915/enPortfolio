@@ -131,7 +131,7 @@ function htmlDevelopment() {
     return src(path.src.html)
         .pipe(plumber())
         .pipe(changed(path.build.html, { extension: '.ejs' }))
-        .pipe(replace(/>.*<\/head>/i, '<%- include("../.wfLayout/linkicon.ejs") %></head>'))
+        .pipe(replace(/>\s<\/head>/i, '><%- include("../.wfLayout/linkicon.ejs") %></head>'))
         .pipe(ejs())
         .pipe(rename({ extname: '.html' }))
         .pipe(replace(/\.(scss|sass)/g, '.css'))
@@ -142,15 +142,15 @@ function htmlDevelopment() {
 
 function htmlProduction() {
     return src(path.src.html)
-        .pipe(replace(/>\s<\/head>/, '<%- include("../.wfLayout/linkicon.ejs") %></head>'))
+        .pipe(replace(/>\s<\/head>/i, '><%- include("../.wfLayout/linkicon.ejs") %></head>'))
         .pipe(ejs())
         .pipe(rename({ extname: '.html' }))
-        .pipe(replace(/(\.\.\/)+/g, ''))
         .pipe(replace(/\.(scss|sass)/g, '.css'))
-        .pipe(replace('.css', '.min.css'))
-        .pipe(replace('.js', '.min.js'))
+        .pipe(replace(/(\.\.\/)+/g, ''))
         .pipe(htmlWebp())
         .pipe(htmlMin({ collapseWhitespace: true }))
+        .pipe(replace('.css', '.min.css'))
+        .pipe(replace('.js', '.min.js'))
         .pipe(dest(path.build.html));
 }
 
@@ -185,7 +185,8 @@ function styleProduction() {
         }))
         .pipe(styleMin())
         .pipe(unuseStyle({
-            html: ['./dist/*.html']
+            html: ['./dist/*.html'],
+            ignore: [/.show/, /.hidden/, /.visible/, /.finished/, /.close/, /.active/, /.open/]
         }))
         .pipe(rename({
             suffix: '.min'
