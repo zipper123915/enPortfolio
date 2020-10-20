@@ -1,0 +1,73 @@
+.review {
+  margin-top: 55px;
+
+  &__inner {
+    display: flex;
+
+    @extend %container;
+
+    @media #{$tablet} {
+      display: block;
+    }
+  }
+
+  &__title {
+    font-family: Raleway, sans-serif;
+    font-size: 30px;
+    font-weight: 500;
+    color: rgb(178, 172, 162);
+  }
+
+  &__text {
+    margin: 0 0 20px 0;
+    font-family: Roboto, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+  }
+
+  &__desc {
+    flex-basis: 66.6666666666666%;
+  }
+
+  &__stats {
+    flex-basis: 33.3333333333333%;
+    margin-left: 30px;
+
+    @media #{$tablet} {
+      margin-left: 0;
+    }
+  }
+
+  &__stat {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid #f1f1f1;
+  }
+
+  &__name {
+    width: 100px;
+    margin-right: 10px;
+    font-family: Raleway, sans-serif;
+    font-size: 14px;
+    color: #363636;
+  }
+
+  &__value {
+    margin-left: 100px;
+    font-family: Roboto, sans-serif;
+    font-size: 14px;
+    color: #686868;
+  }
+
+  &__skill {
+    display: inline-block;
+    padding: 5px 10px;
+    border: 1px solid #f1f1f1;
+    border-radius: 20px;
+
+    &:not(:last-child) {
+      margin-right: 5px;
+    }
+  }
+}

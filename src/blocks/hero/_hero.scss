@@ -6,7 +6,35 @@
   min-height: 100vh;
   font-family: Raleway, sans-serif;
   font-weight: 600;
-  background: fixed no-repeat center/cover;
+  background: fixed no-repeat top/cover;
+
+  &--slider {
+    min-height: unset;
+    background: none !important;
+
+    @extend %container;
+
+    .hero__slide {
+      height: unset;
+    }
+  }
+
+  picture {
+    width: 100%;
+
+    .hero__image {
+      width: 100%;
+      max-height: 600px;
+      object-fit: cover;
+    }
+  }
+
+  &__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 
   &__overlay {
     position: absolute;

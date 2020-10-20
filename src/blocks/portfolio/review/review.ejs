@@ -1,0 +1,15 @@
+<section class="review">
+    <div class="review__inner">
+        <div class="review__desc">
+            <p class="review__text"><%= text; %></p>
+        </div>
+        <ul class="review__stats">
+            <% stats.forEach(stat => { %>
+                <li class="review__stat">
+                    <h6 class="review__name"><%= stat.name %></h6>
+                    <div class="review__value"><%- stat.value %></div>
+                </li>
+            <% }) %>
+        </ul>
+    </div>
+</section>

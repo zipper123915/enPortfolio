@@ -1,3 +1,4 @@
+import '@babel/polyfill';
 import '../blocks/hero/hero';
 import '../blocks/header/header';
 import '../blocks/portfolio/portfolio';

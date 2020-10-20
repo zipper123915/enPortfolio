@@ -1,0 +1,36 @@
+<section id="hero" class="hero hero--slider">
+    <div class="hero__overlay"></div>
+    <div class="hero__inner">
+        <div class="hero__slider">
+            <div class="glide__track hero__track" data-glide-el="track">
+                <ul class="glide__slides">
+                    <% items.forEach(item => { %>
+                        <li class="glide__slide hero__slide">
+                            <img class="hero__image" src="<%= item.img ;%>" alt="">
+                            <div class="hero__content">
+                                <h1 class="hero__title"><%= item.title; %></h1>
+                                <h3 class="hero__lead"><%= item.text; %></h3>
+                            </div>
+                        </li>
+                    <% }); %>
+                </ul>
+            </div>
+
+            <div class="glide__arrows" data-glide-el="controls">
+                <button class="hero__control-arrow glide__arrow glide__arrow--left" data-glide-dir="<">
+                    <img src="../../images/left-arrow.png" alt="left arrow">
+                </button>
+                <button class="hero__control-arrow hero__control-arrow--right glide__arrow glide__arrow--right"
+                        data-glide-dir=">">
+                    <img src="../../images/left-arrow.png" alt="left arrow">
+                </button>
+            </div>
+
+            <div class="glide__bullets hero__pagination" data-glide-el="controls[nav]">
+                <% for(let i = 0;i < items.length; i++) { %>
+                    <button class="glide__bullet hero__bullet" data-glide-dir="=<%= i ;%>"></button>
+                <% } %>
+            </div>
+        </div>
+    </div>
+</section>

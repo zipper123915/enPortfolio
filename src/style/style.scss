@@ -1,4 +1,3 @@
-/* montserrat-300 - latin_cyrillic */
 @font-face {
   font-family: 'Montserrat';
   font-style: normal;
@@ -73,20 +72,6 @@
 }
 
 @import "helpers/index";
-@import "../blocks/header/header";
-@import "../blocks/hero/hero";
-@import "../blocks/button/button";
-@import "../blocks/services/service";
-@import "../blocks/intro/intro";
-@import "../blocks/offer/offer";
-@import "../blocks/portfolio/portfolio";
-@import "../blocks/footer/footer";
-@import "../blocks/stat/stat";
-@import "../blocks/about/about";
-@import "../blocks/skills/skills";
-@import "../blocks/contact/contact";
-@import "../blocks/input/input";
-@import "../blocks/textarea/textarea";
 
 * {
   box-sizing: border-box;
