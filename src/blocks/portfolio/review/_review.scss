@@ -7,7 +7,7 @@
     @extend %container;
 
     @media #{$tablet} {
-      display: block;
+      flex-direction: column-reverse;
     }
   }
 
@@ -26,21 +26,26 @@
   }
 
   &__desc {
-    flex-basis: 66.6666666666666%;
+    width: 66.6666666666666%;
+
+    @media #{$tablet} {
+      width: 100%;
+    }
   }
 
   &__stats {
-    flex-basis: 33.3333333333333%;
+    width: 33.3333333333333%;
     margin-left: 30px;
 
     @media #{$tablet} {
+      width: 100%;
+      margin-bottom: 30px;
       margin-left: 0;
     }
   }
 
   &__stat {
     display: flex;
-    justify-content: space-between;
     padding: 12px 0;
     border-bottom: 1px solid #f1f1f1;
   }
@@ -54,15 +59,31 @@
   }
 
   &__value {
-    margin-left: 100px;
+    margin-left: 50px;
     font-family: Roboto, sans-serif;
     font-size: 14px;
     color: #686868;
   }
 
+  &__link {
+    font-family: Roboto, sans-serif;
+    font-weight: 400;
+    color: rgb(198, 176, 151);
+    text-decoration: none;
+    word-break: break-all;
+    transition: 0.5s;
+
+    &:hover {
+      color: #363636;
+    }
+  }
+
   &__skill {
     display: inline-block;
     padding: 5px 10px;
+    margin-bottom: 5px;
+    color: #686868;
+    cursor: pointer;
     border: 1px solid #f1f1f1;
     border-radius: 20px;
 

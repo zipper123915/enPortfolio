@@ -11,5 +11,7 @@
     font-weight: 400;
     color: rgb(178, 172, 162);
     text-align: center;
+
+    @include adaptiv-font(42, 24);
   }
 }

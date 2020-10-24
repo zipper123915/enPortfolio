@@ -14,6 +14,19 @@
     text-align: center;
   }
 
+  &__link {
+    font-family: Roboto, sans-serif;
+    font-weight: 400;
+    color: rgb(198, 176, 151);
+    text-decoration: none;
+    word-break: break-all;
+    transition: 0.5s;
+
+    &:hover {
+      color: #363636;
+    }
+  }
+
   &__text {
     font-family: Raleway, sans-serif;
     font-size: 18px;

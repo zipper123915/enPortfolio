@@ -44,6 +44,7 @@
     "gulp-sass": "^4.1.0",
     "gulp-sourcemaps": "^2.6.5",
     "gulp-stylelint": "^13.0.0",
+    "gulp-tinypng-compress": "^1.2.5",
     "gulp-uncss": "^1.0.6",
     "gulp-webp-html": "^1.0.2",
     "gulp-webpcss": "^1.1.1",
@@ -77,6 +78,7 @@
   "dependencies": {
     "@babel/polyfill": "^7.12.1",
     "@glidejs/glide": "^3.4.1",
-    "animejs": "^3.2.1"
+    "animejs": "^3.2.1",
+    "imagesloaded": "^4.1.4"
   }
 }

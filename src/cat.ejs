@@ -16,23 +16,26 @@
     <title>Cat Energy</title>
 </head>
 <body>
-<%- include('blocks/portfolio/title/title.ejs') %>
+<%- include('blocks/portfolio/title/title.ejs', {text: "Верстка сайта"}) %>
 <%- include('blocks/hero/hero.ejs', {items: [
-{title: "title", text: "text", img: "../../images/hero-bg-0.png"},
-{title: "title2", text: "text2", img: "../../images/hero-bg-0.png"}
+{title: "Главная", text: "", img: "/images/portfolio/cat-1.png"},
+{title: "Страница с катологом товаров", text: "", img: "/images/portfolio/cat-2.png"},
+{title: "Форма", text: "", img: "/images/portfolio/cat-3.png"},
+{title: "Google page speed", text: "Мобильные", img: "/images/portfolio/cat-4.png"},
+{title: "Google page speed", text: "Десктопные", img: "/images/portfolio/cat-5.png"},
 ]}) %>
 
 <%- include('blocks/portfolio/review/review.ejs', {
 stats: [
 {name: "Направление", value: "Верстка"},
-{name: "Год", value: "2019"},
-{name: "Ссылка", value: "<а target='_blank' href='https://zipper123915.github.io/catEnergy/dist/'>https://zipper123915.github.io/catEnergy/dist/</а>"},
-{name: "Технологии", value: '<span class="review__skill">Gulp</span><span class="review__skill">Gulp</span><span class="review__skill">Gulp</span><span class="review__skill">Gulp</span><span class="review__skill">Bem</span>'}
+{name: "Год создания", value: "2019"},
+{name: "Ссылка на Репозиторий", value: '<a target="_blank" class="review__link" href="https://bit.ly/2HawcR3">https://bit.ly/2HawcR3</a>'},
+{name: "Ссылка", value: '<a target="_blank" class="review__link" href="https://bit.ly/34g6seu">https://bit.ly/34g6seu</a>'},
+{name: "Технологии", value: '<a href="https://gulpjs.com/" target="_blank"><span class="review__skill">Gulp</span></a><a href="https://ru.wikipedia.org/wiki/HTML" target="_blank"><span class="review__skill">HTML</span></a><a href="https://en.wikipedia.org/wiki/JavaScript" target="_blank"><span class="review__skill">JS</span></a><a href="https://sass-lang.com/" target="_blank"><span class="review__skill">SCSS</span></a><a target="_blank" href="https://animejs.com/"><span class="review__skill">Animate js</span></a>'}
 ],
-text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab eaque fugit illo ipsam possimus quam, similique totam? Aliquid amet cupiditate debitis dolorem, fugiat magnam maiores modi possimus provident quae quas ratione, repellat repudiandae sint sunt tenetur ut. Architecto culpa, repellendus"
+text: "Проект Интернет магазина для продажи корма для котов, интерфейс прост и минималистичен, однако сверстать его задача не из легких, стоит обратить внимание на ритинизацию изображений и адаптивную верстку."
 }) %>
 
-<%- include('blocks/contact/contact.ejs') %>
 <%- include('blocks/footer/footer.ejs') %>
 <script defer src="js/vendor.js"></script>
 <script defer src="js/portfolio.js"></script>

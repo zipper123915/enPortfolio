@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style/portfolio.scss">
+    <link rel="stylesheet" href="style/style.scss">
+    <link rel="preload" href="fonts/Montserrat/montserrat-v15-latin_cyrillic-300.woff2" as="font">
+    <link rel="preload" href="fonts/Montserrat/montserrat-v15-latin_cyrillic-regular.woff2" as="font">
+    <link rel="preload" href="fonts/Raleway/raleway-v18-latin_cyrillic-500.woff2" as="font">
+    <link rel="preload" href="fonts/Raleway/raleway-v18-latin_cyrillic-600.woff2" as="font">
+    <link rel="preload" href="fonts/Raleway/raleway-v18-latin_cyrillic-regular.woff2" as="font">
+    <link rel="preload" href="fonts/Roboto/roboto-v20-latin_cyrillic-regular.woff2" as="font">
+    <title>Таймер для тренировок</title>
+</head>
+<body>
+<%- include('blocks/portfolio/title/title.ejs', {text: "To Do list"}) %>
+
+<%- include('blocks/hero/hero.ejs', {items: [
+{title: "Слежение", text: "за доходами и расходами", img: "/images/portfolio/budget-1.png"},
+{title: "История и Фильтрация", text: "", img: "/images/portfolio/budget-2.png"}
+]}) %>
+
+<%- include('blocks/portfolio/review/review.ejs', {
+stats: [
+{name: "Направление", value: "Front-end"},
+{name: "Год создания", value: "2019"},
+{name: "Ссылка на Репозиторий", value: '<a target="_blank" class="review__link" href="https://bit.ly/3og99Vs">https://bit.ly/3og99Vs</a>'},
+{name: "Ссылка", value: '<a target="_blank" class="review__link" href="https://bit.ly/3mmySdf">https://bit.ly/3mmySdf</a>'},
+{name: "Технологии", value: '<a href="https://en.wikipedia.org/wiki/CSS" target="_blank"><span class="review__skill">CSS</span></a><a href="https://en.wikipedia.org/wiki/JavaScript" target="_blank"><span class="review__skill">JS</span></a><a href="https://vuejs.org/" target="_blank"><span class="review__skill">Vue.js</span></a>'}
+],
+text: "Приложения для ведения доходов и расходов, сделанное на Vue.js. Можно вести свой бютжет и к каждой трате или заработку добавлять комментарий. Присутствует функционал фильтрации, по признаку доходов и расходов. Приложение подсчитывает текущий баланс пользователя"
+}) %>
+
+<%- include('blocks/footer/footer.ejs') %>
+<script defer src="js/vendor.js"></script>
+<script defer src="js/portfolio.js"></script>
+</body>
+</html>

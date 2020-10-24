@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style/portfolio.scss">
+    <link rel="stylesheet" href="style/style.scss">
+    <link rel="preload" href="fonts/Montserrat/montserrat-v15-latin_cyrillic-300.woff2" as="font">
+    <link rel="preload" href="fonts/Montserrat/montserrat-v15-latin_cyrillic-regular.woff2" as="font">
+    <link rel="preload" href="fonts/Raleway/raleway-v18-latin_cyrillic-500.woff2" as="font">
+    <link rel="preload" href="fonts/Raleway/raleway-v18-latin_cyrillic-600.woff2" as="font">
+    <link rel="preload" href="fonts/Raleway/raleway-v18-latin_cyrillic-regular.woff2" as="font">
+    <link rel="preload" href="fonts/Roboto/roboto-v20-latin_cyrillic-regular.woff2" as="font">
+    <title>Таймер для тренировок</title>
+</head>
+<body>
+<%- include('blocks/portfolio/title/title.ejs', {text: "Верстка сайта"}) %>
+
+<%- include('blocks/hero/hero.ejs', {items: [
+{title: "Главная страница", text: "", img: "/images/portfolio/pink-1.png"},
+{title: "Главная страница", text: "", img: "/images/portfolio/pink-2.png"},
+{title: "Форма", text: "тредов и коментариев", img: "/images/portfolio/pink-3.png"},
+{title: "Каталог", text: "для создания тредов и загрузки фотографий", img: "/images/portfolio/pink-4.png"},
+{title: "Google page speed", text: "Мобильные", img: "/images/portfolio/pink-5.png"},
+{title: "Google page speed", text: "Десктопные", img: "/images/portfolio/pink-6.png"}
+]}) %>
+
+<%- include('blocks/portfolio/review/review.ejs', {
+stats: [
+{name: "Направление", value: "Верстка"},
+{name: "Год создания", value: "2020"},
+{name: "Ссылка на Репозиторий", value: '<a target="_blank" class="review__link" href="http://bit.ly/pink542">http://bit.ly/pink542</a>'},
+{name: "Ссылка", value: '<a target="_blank" class="review__link" href="http://bit.ly/pink475">http://bit.ly/pink475</a>'},
+{name: "Технологии", value: '<a href="https://gulpjs.com/" target="_blank"><span class="review__skill">Gulp</span></a><a href="https://ru.wikipedia.org/wiki/HTML" target="_blank"><span class="review__skill">HTML</span></a><a href="https://en.wikipedia.org/wiki/JavaScript" target="_blank"><span class="review__skill">JS</span></a><a href="https://sass-lang.com/" target="_blank"><span class="review__skill">SCSS</span></a><a target="_blank" href="https://animejs.com/"><span class="review__skill">Animate js</span></a>'}
+],
+text: 'Сайт для мобильного приложения, адаптив и кроссбраузерность. Высокая скорость загрузки, сжатые изображения. Все это сильные стороны этого проекта. Стоит обратить внимание на ретинизацию картинок'
+}) %>
+
+<%- include('blocks/footer/footer.ejs') %>
+<script defer src="js/vendor.js"></script>
+<script defer src="js/portfolio.js"></script>
+</body>
+</html>
