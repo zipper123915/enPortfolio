@@ -4,15 +4,15 @@
         <div class="contact__form">
             <form name="contact">
                 <div data-field="name" class="contact__error"></div>
-                <%- include('../input/input.ejs', {label: "Ваше имя", name: "name"}) %>
+                <%- include('../input/input.ejs', {label: "Name", name: "name"}) %>
                 <div data-field="email" class="contact__error"></div>
                 <%- include('../input/input.ejs', {label: "Email", name: "email"}) %>
                 <div data-field="message" class="contact__error"></div>
-                <%- include('../textarea/textarea.ejs', {label: "Сообщение", name: "message"}) %>
+                <%- include('../textarea/textarea.ejs', {label: "Message", name: "message"}) %>
                 <div class="contact__button">
-                    <%- include('../button/button.ejs', {text: "Отправить"}) %>
+                    <%- include('../button/button.ejs', {text: "Send"}) %>
                     <img class="contact__loader" src="../../images/ajax-loader.gif" alt="loader">
-                    <p class="contact__success">Сообщение отправлено</p>
+                    <p class="contact__success">Message send</p>
                 </div>
             </form>
         </div>
@@ -23,7 +23,7 @@
                     <a href="mailto:zipper123915.work@gmail.com" class="contact__value">zipper123915.work@gmail.com</a>
                 </div>
                 <div class="contact__wrapper">
-                    <h3 class="contact__name">Социальные сети</h3>
+                    <h3 class="contact__name">Social media</h3>
                     <ul class="contact__value">
                         <li class="contact__social">
                             <a target="_blank" href="https://github.com/zipper123915">

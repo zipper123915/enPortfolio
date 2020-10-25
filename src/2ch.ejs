@@ -13,28 +13,28 @@
     <link rel="preload" href="fonts/Raleway/raleway-v18-latin_cyrillic-600.woff2" as="font">
     <link rel="preload" href="fonts/Raleway/raleway-v18-latin_cyrillic-regular.woff2" as="font">
     <link rel="preload" href="fonts/Roboto/roboto-v20-latin_cyrillic-regular.woff2" as="font">
-    <title>Таймер для тренировок</title>
+    <title>Forum</title>
 </head>
 <body>
-<%- include('blocks/portfolio/title/title.ejs', {text: "Клон форума для общения"}) %>
+<%- include('blocks/portfolio/title/title.ejs', {text: "Clone of popular forum"}) %>
 
 <%- include('blocks/hero/hero.ejs', {items: [
-{title: "Список досок", text: "", img: "./images/portfolio/2ch-1.png"},
-{title: "Создание тредов", text: "", img: "./images/portfolio/2ch-2.png"},
-{title: "Редактирование", text: "тредов и коментариев", img: "./images/portfolio/2ch-3.png"},
-{title: "Форма", text: "для создания тредов и загрузки фотографий", img: "./images/portfolio/2ch-4.png"},
-{title: "Удаление", text: "тредов и комментариев", img: "./images/portfolio/2ch-6.png"}
+{title: "Board list", text: "", img: "./images/portfolio/2ch-1.png"},
+{title: "Create treads", text: "", img: "./images/portfolio/2ch-2.png"},
+{title: "Editing", text: "тредов и коментариев", img: "./images/portfolio/2ch-3.png"},
+{title: "Form", text: "for creating treads and upload images", img: "./images/portfolio/2ch-4.png"},
+{title: "Deleting", text: "treads and comments", img: "./images/portfolio/2ch-6.png"}
 ]}) %>
 
 <%- include('blocks/portfolio/review/review.ejs', {
 stats: [
-{name: "Направление", value: "Web разработка"},
-{name: "Год создания", value: "2020"},
-{name: "Ссылка на Репозиторий", value: '<a target="_blank" class="review__link" href="https://bit.ly/3og99Vs">https://bit.ly/3og99Vs</a>'},
-{name: "Ссылка", value: '<a target="_blank" class="review__link" href="https://bit.ly/2J31Yjt">https://bit.ly/2J31Yjt</a>'},
-{name: "Технологии", value: '<a href="https://vuejs.org" target="_blank"><span class="review__skill">Vue.js</span></a><a href="https://socket.io/" target="_blank"><span class="review__skill">Socket.io</span></a><a href="https://expressjs.com/" target="_blank"><span class="review__skill">Express js</span></a><a href="https://jwt.io/" target="_blank"><span class="review__skill">JWT</span></a><a href="https://mongodb.com/" target="_blank"><span class="review__skill">MongoDB</span></a>'}
+{name: "type", value: "Web dev"},
+{name: "Year of creation", value: "2020"},
+{name: "Link to repo", value: '<a target="_blank" class="review__link" href="https://bit.ly/3og99Vs">https://bit.ly/3og99Vs</a>'},
+{name: "Link", value: '<a target="_blank" class="review__link" href="https://bit.ly/2J31Yjt">https://bit.ly/2J31Yjt</a>'},
+{name: "Technologies", value: '<a href="https://vuejs.org" target="_blank"><span class="review__skill">Vue.js</span></a><a href="https://socket.io/" target="_blank"><span class="review__skill">Socket.io</span></a><a href="https://expressjs.com/" target="_blank"><span class="review__skill">Express js</span></a><a href="https://jwt.io/" target="_blank"><span class="review__skill">JWT</span></a><a href="https://mongodb.com/" target="_blank"><span class="review__skill">MongoDB</span></a>'}
 ],
-text: 'При данного проекта была поставлена цель сделать клон форума <a class="review__link" href="https://2ch.hk">2ch</a>, который написан на php и jQuery c использованием более современных технологий. Поставленная задача была исполнена с реализацией основного функционала. Качественное отличие моего клона в том что все изменения, сделанные пользователем, происходят у других пользователей практически сразу без перезагрузки страницы'
+text: 'The goal of this project was to make a clone of the forum <a class="review__link" href="https://2ch.hk">2ch</a>, which is written in php and jQuery using more modern technologies. This task was done with the implementation of basic functionality. The qualitative difference of my clone is that all the changes made by the user occur to other users almost immediately without reloading the page.'
 }) %>
 
 <%- include('blocks/footer/footer.ejs') %>

@@ -13,26 +13,26 @@
     <link rel="preload" href="fonts/Raleway/raleway-v18-latin_cyrillic-600.woff2" as="font">
     <link rel="preload" href="fonts/Raleway/raleway-v18-latin_cyrillic-regular.woff2" as="font">
     <link rel="preload" href="fonts/Roboto/roboto-v20-latin_cyrillic-regular.woff2" as="font">
-    <title>Таймер для тренировок</title>
+    <title>TODO</title>
 </head>
 <body>
 <%- include('blocks/portfolio/title/title.ejs', {text: "To Do list"}) %>
 
 <%- include('blocks/hero/hero.ejs', {items: [
-{title: "Структура задачи", text: "Заголовок и тело", img: "./images/portfolio/todo-1.png"},
-{title: "Фильтрация задач", text: "По признаку их незавершенности", img: "./images/portfolio/todo-2.png"},
-{title: "Сообщение", text: "О том, что задач более нет", img: "./images/portfolio/todo-3.png"}
+{title: "Task structure", text: "Title and body", img: "./images/portfolio/todo-1.png"},
+{title: "Task Filtering", text: "Because of their incompleteness.", img: "./images/portfolio/todo-2.png"},
+{title: "Message", text: "That there are no more tasks", img: "./images/portfolio/todo-3.png"}
 ]}) %>
 
 <%- include('blocks/portfolio/review/review.ejs', {
 stats: [
-{name: "Направление", value: "Front-end"},
-{name: "Год создания", value: "2019"},
-{name: "Ссылка на Репозиторий", value: '<a target="_blank" class="review__link" href="https://bit.ly/34qUTkI">https://bit.ly/34qUTkI</a>'},
-{name: "Ссылка", value: '<a target="_blank" class="review__link" href="https://bit.ly/2Hlyahz">https://bit.ly/2Hlyahz</a>'},
-{name: "Технологии", value: '<a href="https://en.wikipedia.org/wiki/HTML" target="_blank"><span class="review__skill">HTML</span></a><a href="https://en.wikipedia.org/wiki/CSS" target="_blank"><span class="review__skill">CSS</span></a><a href="https://en.wikipedia.org/wiki/JavaScript" target="_blank"><span class="review__skill">JS</span></a><a href="https://getbootstrap.com/" target="_blank"><span class="review__skill">Bootstrap</span></a>'}
+{name: "type", value: "Front-end"},
+{name: "Year of creation", value: "2019"},
+{name: "Link to repo", value: '<a target="_blank" class="review__link" href="https://bit.ly/34qUTkI">https://bit.ly/34qUTkI</a>'},
+{name: "Link", value: '<a target="_blank" class="review__link" href="https://bit.ly/2Hlyahz">https://bit.ly/2Hlyahz</a>'},
+{name: "Technologies", value: '<a href="https://en.wikipedia.org/wiki/HTML" target="_blank"><span class="review__skill">HTML</span></a><a href="https://en.wikipedia.org/wiki/CSS" target="_blank"><span class="review__skill">CSS</span></a><a href="https://en.wikipedia.org/wiki/JavaScript" target="_blank"><span class="review__skill">JS</span></a><a href="https://getbootstrap.com/" target="_blank"><span class="review__skill">Bootstrap</span></a>'}
 ],
-text: "Пожалуй первый проект, который делает разработчик, когда выучит js, это ToDo лист. В моем ToDo есть функционал завершения задачи, а так же фильтрации по сему признаку. И сообщение о том, что задач, с указаным фильтром более нет, более нет. А так же 3 темы оформления. Я использовал bootstrap для оформления интерфейса"
+text: "Perhaps the first project that a developer does when he learns js is ToDo sheet. In my ToDo there is functionality to complete the task, as well as filtering by this feature. And the message that there are no more tasks with this filter. As well as 3 design themes. I used bootstrap to design the interface"
 }) %>
 
 <%- include('blocks/footer/footer.ejs') %>

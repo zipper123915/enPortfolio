@@ -13,25 +13,25 @@
     <link rel="preload" href="fonts/Raleway/raleway-v18-latin_cyrillic-600.woff2" as="font">
     <link rel="preload" href="fonts/Raleway/raleway-v18-latin_cyrillic-regular.woff2" as="font">
     <link rel="preload" href="fonts/Roboto/roboto-v20-latin_cyrillic-regular.woff2" as="font">
-    <title>Анонимный чат</title>
+    <title>Anon chat</title>
 </head>
 <body>
-<%- include('blocks/portfolio/title/title.ejs', {text: "Приложение для анонимного общения в интернете"}) %>
+<%- include('blocks/portfolio/title/title.ejs', {text: "Application for anonymous communication"}) %>
 <%- include('blocks/hero/hero.ejs', {items: [
-{title: "Главная", text: "Подбор собеседника по заданным критериям", img: "./images/portfolio/anon-1.png"},
-{title: "2 темы оформления", text: "", img: "./images/portfolio/anon-2.png"},
-{title: "Ожидание", text: "Если подходящего собеседника не нашлось сразу можно подождать пока он зайдет", img: "./images/portfolio/anon-3.png"}
+{title: "Main page", text: "Search for oppenent", img: "./images/portfolio/anon-1.png"},
+{title: "2 design topics", text: "", img: "./images/portfolio/anon-2.png"},
+{title: "Waiting", text: "If there is no suitable interlocutor, you can wait for him to come in.", img: "./images/portfolio/anon-3.png"}
 ]}) %>
 
 <%- include('blocks/portfolio/review/review.ejs', {
 stats: [
-{name: "Направление", value: "Web програмирование"},
-{name: "Год создания", value: "2020"},
-{name: "Ссылка на Репозиторий", value: '<a target="_blank" class="review__link" href="https://bit.ly/3mhot2a">https://bit.ly/3mhot2a</a>'},
-{name: "Ссылка", value: '<a target="_blank" class="review__link" href="https://bit.ly/34jGffb">https://bit.ly/34jGffb</a>'},
-{name: "Технологии", value: '<a href="https://vuejs.org/" target="_blank"><span class="review__skill">Vue.js</span></a><a href="https://nodejs.org/en/" target="_blank"><span class="review__skill">Node.js</span></a><a href="https://www.mongodb.com/" target="_blank"><span class="review__skill">Mongo DB</span></a><a href="https://socket.io/" target="_blank"><span class="review__skill">Socket IO</span></a><a target="_blank" href="https://animejs.com/"><span class="review__skill">Animate js</span></a>'}
+{name: "type", value: "Web dev"},
+{name: "Year of creation", value: "2020"},
+{name: "Link on repo", value: '<a target="_blank" class="review__link" href="https://bit.ly/3mhot2a">https://bit.ly/3mhot2a</a>'},
+{name: "Link", value: '<a target="_blank" class="review__link" href="https://bit.ly/34jGffb">https://bit.ly/34jGffb</a>'},
+{name: "Technologies", value: '<a href="https://vuejs.org/" target="_blank"><span class="review__skill">Vue.js</span></a><a href="https://nodejs.org/en/" target="_blank"><span class="review__skill">Node.js</span></a><a href="https://www.mongodb.com/" target="_blank"><span class="review__skill">Mongo DB</span></a><a href="https://socket.io/" target="_blank"><span class="review__skill">Socket IO</span></a><a target="_blank" href="https://animejs.com/"><span class="review__skill">Animate js</span></a>'}
 ],
-text: "Чат для подбора анонимного собеседника из интернета и последующего общения с ним. Можно выбрать собеседника по возрасту и полу, так же указав свой возраст и пол. На сайте есть функционал переключения на темную тему. Данные о переписках никуда не сохраняются, все удаляется после выхода из чата. Реализован подсчет пользователей онлайн, а там же количество пользователей которые находятся в поиске."
+text: "Chat for the selection of an anonymous interlocutor from the Internet and subsequent communication with him. You can choose an interlocutor by age and sex, as well as specifying your age and sex. The site has a function of switching to a dark topic. Data on correspondence is not saved anywhere, everything is deleted after you leave the chat. We have implemented the calculation of users online, and there are also the number of users who are in search."
 }) %>
 
 <%- include('blocks/footer/footer.ejs') %>

@@ -16,24 +16,24 @@
     <title>Cat Energy</title>
 </head>
 <body>
-<%- include('blocks/portfolio/title/title.ejs', {text: "Верстка сайта"}) %>
+<%- include('blocks/portfolio/title/title.ejs', {text: "Site layout"}) %>
 <%- include('blocks/hero/hero.ejs', {items: [
 {title: "Главная", text: "", img: "./images/portfolio/cat-1.png"},
-{title: "Страница с катологом товаров", text: "", img: "./images/portfolio/cat-2.png"},
+{title: "Page with the goods cathologist", text: "", img: "./images/portfolio/cat-2.png"},
 {title: "Форма", text: "", img: "./images/portfolio/cat-3.png"},
-{title: "Google page speed", text: "Мобильные", img: "./images/portfolio/cat-4.png"},
-{title: "Google page speed", text: "Десктопные", img: "./images/portfolio/cat-5.png"},
+{title: "Google page speed", text: "Mobile", img: "./images/portfolio/cat-4.png"},
+{title: "Google page speed", text: "Desktop", img: "./images/portfolio/cat-5.png"},
 ]}) %>
 
 <%- include('blocks/portfolio/review/review.ejs', {
 stats: [
-{name: "Направление", value: "Верстка"},
-{name: "Год создания", value: "2019"},
-{name: "Ссылка на Репозиторий", value: '<a target="_blank" class="review__link" href="https://bit.ly/2HawcR3">https://bit.ly/2HawcR3</a>'},
-{name: "Ссылка", value: '<a target="_blank" class="review__link" href="https://bit.ly/34g6seu">https://bit.ly/34g6seu</a>'},
-{name: "Технологии", value: '<a href="https://gulpjs.com/" target="_blank"><span class="review__skill">Gulp</span></a><a href="https://ru.wikipedia.org/wiki/HTML" target="_blank"><span class="review__skill">HTML</span></a><a href="https://en.wikipedia.org/wiki/JavaScript" target="_blank"><span class="review__skill">JS</span></a><a href="https://sass-lang.com/" target="_blank"><span class="review__skill">SCSS</span></a><a target="_blank" href="https://animejs.com/"><span class="review__skill">Animate js</span></a>'}
+{name: "type", value: "Верстка"},
+{name: "Year of creation", value: "2019"},
+{name: "Link to repo", value: '<a target="_blank" class="review__link" href="https://bit.ly/2HawcR3">https://bit.ly/2HawcR3</a>'},
+{name: "Link", value: '<a target="_blank" class="review__link" href="https://bit.ly/34g6seu">https://bit.ly/34g6seu</a>'},
+{name: "Technologies", value: '<a href="https://gulpjs.com/" target="_blank"><span class="review__skill">Gulp</span></a><a href="https://ru.wikipedia.org/wiki/HTML" target="_blank"><span class="review__skill">HTML</span></a><a href="https://en.wikipedia.org/wiki/JavaScript" target="_blank"><span class="review__skill">JS</span></a><a href="https://sass-lang.com/" target="_blank"><span class="review__skill">SCSS</span></a><a target="_blank" href="https://animejs.com/"><span class="review__skill">Animate js</span></a>'}
 ],
-text: "Проект Интернет магазина для продажи корма для котов, интерфейс прост и минималистичен, однако сверстать его задача не из легких, стоит обратить внимание на ритинизацию изображений и адаптивную верстку."
+text: "The project of the Internet store for the sale of cat food, the interface is simple and minimalistic, but it is not an easy task to make it up, you should pay attention to the rhytinization of images and adaptive layout."
 }) %>
 
 <%- include('blocks/footer/footer.ejs') %>

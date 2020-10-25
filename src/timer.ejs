@@ -13,25 +13,25 @@
     <link rel="preload" href="fonts/Raleway/raleway-v18-latin_cyrillic-600.woff2" as="font">
     <link rel="preload" href="fonts/Raleway/raleway-v18-latin_cyrillic-regular.woff2" as="font">
     <link rel="preload" href="fonts/Roboto/roboto-v20-latin_cyrillic-regular.woff2" as="font">
-    <title>Таймер для тренировок</title>
+    <title>Training timer</title>
 </head>
 <body>
-<%- include('blocks/portfolio/title/title.ejs', {text: "Онлайн таймер для тренировки"}) %>
+<%- include('blocks/portfolio/title/title.ejs', {text: "Training timer online"}) %>
 <%- include('blocks/hero/hero.ejs', {items: [
-{title: "Таймер", text: "Таймер с круговой диаграммой и звуковым сопровождением", img: "./images/portfolio/timer-1.png"},
-{title: "Темная тема", text: "", img: "./images/portfolio/timer-2.png"},
-{title: "Создание и редактирование тренировок", text: "", img: "./images/portfolio/timer-3.png"}
+{title: "Timer", text: "Timer with pie chart and sound accompaniment", img: "./images/portfolio/timer-1.png"},
+{title: "Dark theme", text: "", img: "./images/portfolio/timer-2.png"},
+{title: "Creation and editing of training sessions", text: "", img: "./images/portfolio/timer-3.png"}
 ]}) %>
 
 <%- include('blocks/portfolio/review/review.ejs', {
 stats: [
-{name: "Направление", value: "Web програмирование"},
-{name: "Год создания", value: "2020"},
-{name: "Ссылка на Репозиторий", value: '<a target="_blank" class="review__link" href="https://bit.ly/37zQNc0">https://bit.ly/37zQNc0</a>'},
-{name: "Ссылка", value: '<a target="_blank" class="review__link" href="https://bit.ly/2FRzwQb">https://bit.ly/2FRzwQb</a>'},
-{name: "Технологии", value: '<a href="https://vuejs.org/" target="_blank"><span class="review__skill">Vue.js</span></a><a href="https://sass-lang.com/" target="_blank"><span class="review__skill">SCSS</span></a><a href="https://vuetifyjs.com/" target="_blank"><span class="review__skill">Vuetify</span></a>'}
+{name: "type", value: "Web програмирование"},
+{name: "Year of creation", value: "2020"},
+{name: "Link to repo", value: '<a target="_blank" class="review__link" href="https://bit.ly/37zQNc0">https://bit.ly/37zQNc0</a>'},
+{name: "Link", value: '<a target="_blank" class="review__link" href="https://bit.ly/2FRzwQb">https://bit.ly/2FRzwQb</a>'},
+{name: "Technologies", value: '<a href="https://vuejs.org/" target="_blank"><span class="review__skill">Vue.js</span></a><a href="https://sass-lang.com/" target="_blank"><span class="review__skill">SCSS</span></a><a href="https://vuetifyjs.com/" target="_blank"><span class="review__skill">Vuetify</span></a>'}
 ],
-text: "Этот проект был создан потому что я не нашел того что мне нужно на рынке, на тот момент это было так. В тренировках предусмотрены кастомные интервалы для каждого упражнения и для каждого периода отдыха. У таймера есть звуковое сопровождения по окончанию упражнения или периода отдыха."
+text: "This project was created because I did not find what I needed on the market, at that time it was so. There are custom intervals for each exercise and for each rest period. The timer has a sound accompaniment at the end of the exercise or rest period."
 }) %>
 
 <%- include('blocks/footer/footer.ejs') %>

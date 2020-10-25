@@ -13,29 +13,29 @@
     <link rel="preload" href="fonts/Raleway/raleway-v18-latin_cyrillic-600.woff2" as="font">
     <link rel="preload" href="fonts/Raleway/raleway-v18-latin_cyrillic-regular.woff2" as="font">
     <link rel="preload" href="fonts/Roboto/roboto-v20-latin_cyrillic-regular.woff2" as="font">
-    <title>Таймер для тренировок</title>
+    <title>Pink</title>
 </head>
 <body>
-<%- include('blocks/portfolio/title/title.ejs', {text: "Верстка сайта"}) %>
+<%- include('blocks/portfolio/title/title.ejs', {text: "Site layout"}) %>
 
 <%- include('blocks/hero/hero.ejs', {items: [
-{title: "Главная страница", text: "", img: "./images/portfolio/pink-1.png"},
-{title: "Главная страница", text: "", img: "./images/portfolio/pink-2.png"},
-{title: "Форма", text: "тредов и коментариев", img: "./images/portfolio/pink-3.png"},
-{title: "Каталог", text: "для создания тредов и загрузки фотографий", img: "./images/portfolio/pink-4.png"},
-{title: "Google page speed", text: "Мобильные", img: "./images/portfolio/pink-5.png"},
-{title: "Google page speed", text: "Десктопные", img: "./images/portfolio/pink-6.png"}
+{title: "Main page", text: "", img: "./images/portfolio/pink-1.png"},
+{title: "Main page", text: "", img: "./images/portfolio/pink-2.png"},
+{title: "Form", text: "", img: "./images/portfolio/pink-3.png"},
+{title: "Каталог", text: "", img: "./images/portfolio/pink-4.png"},
+{title: "Google page speed", text: "mobile", img: "./images/portfolio/pink-5.png"},
+{title: "Google page speed", text: "desktop", img: "./images/portfolio/pink-6.png"}
 ]}) %>
 
 <%- include('blocks/portfolio/review/review.ejs', {
 stats: [
-{name: "Направление", value: "Верстка"},
-{name: "Год создания", value: "2020"},
-{name: "Ссылка на Репозиторий", value: '<a target="_blank" class="review__link" href="http://bit.ly/pink542">http://bit.ly/pink542</a>'},
-{name: "Ссылка", value: '<a target="_blank" class="review__link" href="http://bit.ly/pink475">http://bit.ly/pink475</a>'},
-{name: "Технологии", value: '<a href="https://gulpjs.com/" target="_blank"><span class="review__skill">Gulp</span></a><a href="https://ru.wikipedia.org/wiki/HTML" target="_blank"><span class="review__skill">HTML</span></a><a href="https://en.wikipedia.org/wiki/JavaScript" target="_blank"><span class="review__skill">JS</span></a><a href="https://sass-lang.com/" target="_blank"><span class="review__skill">SCSS</span></a><a target="_blank" href="https://animejs.com/"><span class="review__skill">Animate js</span></a>'}
+{name: "type", value: "Верстка"},
+{name: "Year of creation", value: "2020"},
+{name: "Link to repo", value: '<a target="_blank" class="review__link" href="http://bit.ly/pink542">http://bit.ly/pink542</a>'},
+{name: "Link", value: '<a target="_blank" class="review__link" href="http://bit.ly/pink475">http://bit.ly/pink475</a>'},
+{name: "Technologies", value: '<a href="https://gulpjs.com/" target="_blank"><span class="review__skill">Gulp</span></a><a href="https://ru.wikipedia.org/wiki/HTML" target="_blank"><span class="review__skill">HTML</span></a><a href="https://en.wikipedia.org/wiki/JavaScript" target="_blank"><span class="review__skill">JS</span></a><a href="https://sass-lang.com/" target="_blank"><span class="review__skill">SCSS</span></a><a target="_blank" href="https://animejs.com/"><span class="review__skill">Animate js</span></a>'}
 ],
-text: 'Сайт для мобильного приложения, адаптив и кроссбраузерность. Высокая скорость загрузки, сжатые изображения. Все это сильные стороны этого проекта. Стоит обратить внимание на ретинизацию картинок'
+text: 'Site for mobile application, adaptive and cross-browser. High download speed, compressed images. All these are the strengths of this project. It is worth paying attention to retinitization of images'
 }) %>
 
 <%- include('blocks/footer/footer.ejs') %>
