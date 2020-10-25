@@ -22,7 +22,7 @@ const webpackStream = require('webpack-stream');
 const webpackConfig = require('./webpack.config.js');
 
 // images
-// const imagemin = require('gulp-image');
+const imagemin = require('gulp-image');
 const webp = require('gulp-cwebp');
 const favicons = require('gulp-favicons');
 
@@ -36,7 +36,6 @@ const plumber = require('gulp-plumber');
 const sourceMap = require('gulp-sourcemaps');
 const rename = require('gulp-rename');
 const yargs = require('yargs');
-const zip = require('gulp-zip');
 const changed = require('gulp-changed');
 
 // Imports finish
@@ -112,13 +111,6 @@ function styleLinter() {
                 }
             ]
         }));
-}
-
-function gzipProduction() {
-    return src(`./${ projectFolder }/**/*.*`)
-        .pipe(zip('site'))
-        .pipe(rename({ extname: '.zip' }))
-        .pipe(dest('.'));
 }
 
 function scriptLinter() {
@@ -224,23 +216,23 @@ function imagesDevelopment() {
         .pipe(browserSync.stream());
 }
 
-function imagesProduction() {
+function imagesProduction() { // run not on linux
     return src(path.src.img)
         .pipe(changed(path.build.img, { extension: '.{jpg|png|jpeg|gif|svg}' }))
         .pipe(webp())
         .pipe(dest(path.build.img))
         .pipe(src(path.src.img))
-        // .pipe(imagemin({
-        //     pngquant: true,
-        //     optipng: false,
-        //     zopflipng: true,
-        //     jpegRecompress: false,
-        //     mozjpeg: true,
-        //     gifsicle: true,
-        //     svgo: true,
-        //     concurrent: 10,
-        //     quiet: true // defaults to false
-        // }))
+        .pipe(imagemin({
+            pngquant: true,
+            optipng: false,
+            zopflipng: true,
+            jpegRecompress: false,
+            mozjpeg: true,
+            gifsicle: true,
+            svgo: true,
+            concurrent: 10,
+            quiet: true // defaults to false
+        }))
         .pipe(dest(path.build.img))
         .pipe(browserSync.stream());
 }
@@ -315,8 +307,7 @@ if (!production) {
         scriptProduction,
         imagesProduction,
         fontsProduction,
-        faviconsProduction,
-        gzipProduction
+        faviconsProduction
     );
     
     exports.lint = series(styleLinter, scriptLinter);
