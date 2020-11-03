@@ -1,5 +1,5 @@
 import Glide, { Controls, Swipe } from '@glidejs/glide/dist/glide.modular.esm';
-import webpCheck from '../../js/webpCheck';
+import webpCheck from '../../../../../portfolio/src/js/webpCheck';
 
 const hero = document.querySelector('.hero');
 const url = new URL(location.href);
